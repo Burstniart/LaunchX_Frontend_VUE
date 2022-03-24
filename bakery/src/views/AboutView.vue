@@ -30,7 +30,6 @@
           </tr>
           </table>
         </div>
-
         <h1>Orders received</h1>
         <div class='tableDiv'>
         <table class='orderTable'>
@@ -43,18 +42,15 @@
             <td>Email</td>
           </tr>
           <tr v-for="(fullOrder,index) in $store.getters.getAllOrders" :key="index">
-            <td>{{fullOrder.flavors}}</td>
-            <td>{{fullOrder.toppings}}</td>
+            <td>{{fullOrder.flavors.toString()}}</td>
+            <td>{{fullOrder.toppings.toString()}}</td>
             <td>{{fullOrder.instructions}}</td>
             <td>{{fullOrder.name}}</td>
             <td>{{fullOrder.phone}}</td>
             <td>{{fullOrder.mail}}</td>
           </tr>
-
         </table>
         </div>
-
-
   </div>
 </template>
 
@@ -67,9 +63,9 @@ export default {
       }
     },
     methods: {
-       
   }
 }
+console.log(document.getElementsByClassName('flavor'));
 </script>
 
 <style scoped>
