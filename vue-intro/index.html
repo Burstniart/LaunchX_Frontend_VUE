@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Intro</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    
+    <div id="app">
+        <img v-bind:src="photo" alt="" :class="gender">
+        <h1>{{fname}} {{lname}}</h1>
+        <h3>Email: {{email}}</h3>
+        <h3>{{gender}}</h3>
+        <button v-on:click="changeUser()" :class="gender">Generate random user</button>
+    </div>
+    
+<!-- import vue -->
+<script src="https://unpkg.com/vue@3"></script>
+<!-- my script -->
+<script src="./app.js"></script>
+</body>
+</html>
